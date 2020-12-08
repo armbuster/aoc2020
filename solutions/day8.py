@@ -25,8 +25,8 @@ def donext(i, completed, acc):
 if __name__ == "__main__":
     
 
-    instr = open("../inputs/day8.txt", "r").readlines()
-    acc = donext(0, set(), 0)
+    instr = open("inputs/day8.txt", "r").readlines()
+    status, acc = donext(0, set(), 0)
     print(f"Ans 1: {acc}")
             
     
@@ -34,7 +34,7 @@ if __name__ == "__main__":
     # get index of each nop
     nop_ind = [i for i, operation in enumerate(instr) if operation.split()[0] == "nop"]
     for i in nop_ind:
-        instr = open("../inputs/day8.txt", "r").readlines()
+        instr = open("inputs/day8.txt", "r").readlines()
         op, n = instr[i].split(" ")
         instr[i] = "jmp" + " " + n
         status, acc = donext(0, set(), 0)
@@ -45,7 +45,7 @@ if __name__ == "__main__":
     # get index of each nop
     jmp_ind = [i for i, operation in enumerate(instr) if operation.split()[0] == "jmp"]
     for i in jmp_ind:
-        instr = open("../inputs/day8.txt", "r").readlines()
+        instr = open("inputs/day8.txt", "r").readlines()
         op, n = instr[i].split(" ")
         instr[i] = "nop" + " " + n
         status, acc = donext(0, set(), 0)

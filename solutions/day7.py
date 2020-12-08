@@ -50,7 +50,7 @@ def dfs(v, A, count):
 
 if __name__ == "__main__":
 
-    constraints = open("../inputs/day7.txt", "r").readlines()
+    constraints = open("inputs/day7.txt", "r").readlines()
     bags = []
     for s in constraints:
         bag = parse(s.strip())

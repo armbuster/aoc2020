@@ -12,7 +12,7 @@ def countintersect(s):
 
 
 if __name__ == "__main__":
-    forms = open("../inputs/day6.txt", "r").read().split('\n\n')
+    forms = open("inputs/day6.txt", "r").read().split('\n\n')
     part1 = sum(map(countletters, forms))
     print(f"Ans 1: {part1}")
     part2 = sum(map(countintersect, forms))
